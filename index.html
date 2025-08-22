@@ -22,12 +22,15 @@
         <span>Je suis...</span>
       </a>
     </div>
+  
     <div class="Newsletter">
       <a href="#">
         <i class="fa-solid fa-envelope"></i>
         <span>envoyer une lettre</span>
       </a>
     </div>
+    
+    
     <div class="Recherch">
       <a href="#">
         <i class="fa-solid fa-magnifying-glass"></i>
@@ -68,6 +71,40 @@
     </h2>
   </div>
   
+  
+    <div class="card" role="region" aria-label="Formulaire de contact">
+      <div class="title">
+        <h2>Envoyer un message au propriétaire du site</h2>
+        <p>Besoin d’aide, d’une idée d’amélioration ou d’un bug à signaler ? Écris‑nous ici.</p>
+      </div>
+      
+      <form id="contactForm" action="mailto:ibms@gmail.com" method="POST" enctype="text/plain">
+        <div class="grid">
+          <div>
+            <label for="email">Ton adresse e‑mail <span aria-hidden="true" style="color:#ef4444">*</span></label>
+            <input class="field" id="email" name="Email" type="email" placeholder="exemple@gmail.com" required />
+          </div>
+          
+          <div>
+            <label for="message">Ton message <span aria-hidden="true" style="color:#ef4444">*</span></label>
+            <textarea class="field" id="message" name="Message" placeholder="Écris ton message…" minlength="5" required></textarea>
+          </div>
+          
+          <div class="row">
+            <input class="checkbox" id="terms" type="checkbox" required />
+            <label for="terms" class="helper">
+              J’ai lu et j’accepte <a href="#" title="Ouvrir les conditions">les conditions d’envoi</a> <span aria-hidden="true" style="color:#ef4444">*</span>
+            </label>
+          </div>
+        </div>
+        
+        <div class="actions">
+          <button type="submit">Envoyer le message</button>
+          <span class="note">* champs obligatoires</span>
+          <span id="ok" class="ok">✅ Formulaire prêt, ouverture de votre e‑mail…</span>
+        </div>
+      </form>
+    </div>
   
   <script src="js/main.js"></script>
 </body>
