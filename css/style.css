@@ -1,62 +1,120 @@
 body {
-    background-color: black;
-    color: white;
+  background-color: black;
+  color: white;
+  margin: 0;
+  padding: 0;
+  padding-bottom: 60px;
 }
-/*conteneur de #classes et #statu*/
+
+/* Conteneur de #classes et #statu */
 #conteneur {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   gap: 2rem;
-  display: none;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.5s ease, visibility 0.3s ease;
+  box-sizing: border-box;
+  /* Désactive la couleur de fond par défaut sur mobile */
+  -webkit-tap-highlight-color: transparent;
 }
-/*pour le conteneur des classes*/
-#classes{
+
+#conteneur.afficher_classe {
+  visibility: visible;
+  opacity: 1;
+}
+
+/* Pour le conteneur des classes */
+#classes {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   cursor: pointer;
+  width: 100%;
+  max-width: 500px;
 }
-/*pour les classes*/
-.classe{
+
+/* Pour les cycles */
+.cycle {
+  margin-top: 20px;
+  margin-bottom: 10px;
+  text-align: center;
+  width: 100%;
+}
+
+/* Pour les classes */
+.classe {
   width: 90%;
   padding: 1rem;
   border: white solid 3px;
   border-radius: 1rem;
   box-shadow: 1px 2px 4px white;
+  text-align: center;
+  margin: 10px 0;
+  transition: transform 0.2s ease, background-color 0.2s ease;
 }
-a{
+
+.classe:hover {
+  transform: scale(0.95);
+  background-color: #222;
+}
+
+a {
   text-decoration: none;
   color: white;
   text-align: center;
   cursor: pointer;
-  /* Désactive la couleur de fond par défaut sur mobile */
-  -webkit-tap-highlight-color: transparent;
+  width: 100%;
 }
 
-/* navbar */
+/* Navbar */
 .navbar {
   position: fixed;
   bottom: 0;
   width: 100%;
-  background: #3056ff; /* Bleu */
+  background: #3056ff;
+  /* Bleu */
   display: flex;
   justify-content: space-around;
   align-items: center;
   padding: 8px 0;
+  z-index: 1000;
+    /* Désactive la couleur de fond par défaut sur mobile */
+  -webkit-tap-highlight-color: transparent;
 }
 
 /* Liens */
 .navbar a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   font-size: 14px;
   flex: 1;
+  padding: 5px 0;
 }
 
 /* Icônes */
 .navbar i {
-  font-size: 22px;
-  display: block;
-  margin-bottom: 4px;
+  font-size: 1.5rem;
+  margin-bottom: 5px;
+}
+
+/* Pour l'enseignant */
+#enseignant {
+  width: 90%;
+  max-width: 500px;
+  padding: 1rem;
+  border: white solid 3px;
+  border-radius: 1rem;
+  box-shadow: 1px 2px 4px white;
+  text-align: center;
+  transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+#enseignant:hover {
+  transform: scale(0.95);
+  background-color: #222;
 }

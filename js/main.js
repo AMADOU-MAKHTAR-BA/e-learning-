@@ -1,15 +1,11 @@
-const classe = document.querySelector("#conteneur");
-const statut = document.querySelector(".statut");
 
-function afficher_classes() {
-  classe.classList.toggle("afficher_classe");
+    const conteneur = document.querySelector("#conteneur");
+    const statut = document.querySelector(".statut");
+
+    function afficher_classes(e) {
+      e.preventDefault()
+      conteneur.classList.toggle("afficher_classe");
+    }
+
+    statut.onclick = afficher_classes;
   
-  if (classe.classList.contains("afficher_classe")) {
-    classe.style.display = "block"
-  }
-  else {
-    classe.style.display = "none"
-  }
-}
-
-statut.onclick = afficher_classes
